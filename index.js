@@ -23,6 +23,7 @@ var moduleRoot = (function(_rootPath) {
  *
  * @api public
  */
+ //Mixes GrapplingHook methods into instance. allowHooks means declare hooks.
 var Keystone = function() {
 	grappling.mixin(this).allowHooks('pre:static', 'pre:bodyparser', 'pre:session', 'pre:routes', 'pre:render', 'updates', 'signout', 'signin', 'pre:logger');
 	this.lists = {};
@@ -88,6 +89,7 @@ var Keystone = function() {
 		api: require('./lib/middleware/api')(this),
 		cors: require('./lib/middleware/cors')(this)
 	};
+	console.log(this)
 };
 
 _.extend(Keystone.prototype, require('./lib/core/options')());

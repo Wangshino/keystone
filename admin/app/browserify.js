@@ -7,6 +7,7 @@ var packages = require('../packages');
 var path = require('path');
 var watchify = require('watchify');
 
+//basedir =/home/wyzj/source-keystone/keystone/admin/src
 var basedir = path.resolve(__dirname + '/../src/');
 var devMode = process.env.KEYSTONE_DEV === 'true';
 
